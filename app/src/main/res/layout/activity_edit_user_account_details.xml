@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditUserAccountDetailsActivity">
+
+    <TextView
+        android:id="@+id/checkoutTitle"
+        style="@style/Headings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkout Details"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/customerDetailsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/customerDetailsTitle"
+        style="@style/SubHeadings"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:text="Customer Details"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typeYourName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/cardDetailsTitle"
+        style="@style/SubHeadings"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:text="Card Details"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typeCardNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typePhoneNumber"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typeYourName"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type Your Name"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typeYourAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailsTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typeCardNumber"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type Credit Card Number"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typeCardType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDetailsTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typeCvvCvc"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type CVV/CVC"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/checkoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeExpirationDate"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typeCardType"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type Your Card Type"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typeExpirationDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeCardNumber"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typeExpirationDate"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="CC Expiration Date (mm/yy)"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typeCvvCvc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeCardType"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/checkoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Checkout"
+        android:text="Ckeckout"
+        android:textColorHint="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeCvvCvc"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typePhoneNumber"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type Your Phone Number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/cardDetailsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typePostalCode"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typePostalCode"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type Your Postal Code"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typePhoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeYourCity"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typeYourCity"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type Your City"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typePostalCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeYourAddress"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/typeYourAddress"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Type Your Address"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/typeYourCity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeYourName"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
