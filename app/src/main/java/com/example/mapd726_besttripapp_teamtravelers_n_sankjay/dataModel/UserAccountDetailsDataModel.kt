@@ -5,7 +5,9 @@ data class UserAccountDetailsDataModel(
     var lastName: String = "",
     var eMail: String = "",
     var address: String = "",
-    var pstalCode: String = "",
+    var postalCode: String = "",
     var phoneNumber: Int = 0,
     var cardNumber: Int = 0,
+    var cardType: String = "",
+    var cardCvv: Int = 0,
 )

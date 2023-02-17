@@ -39,7 +39,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/viewProfileImageHolder"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
@@ -49,7 +49,7 @@
                         app:srcCompat="@drawable/profile" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/viewFullNameData"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -57,23 +57,23 @@
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView"
-                        app:layout_constraintStart_toStartOf="@+id/imageView"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                        app:layout_constraintEnd_toEndOf="@+id/viewProfileImageHolder"
+                        app:layout_constraintStart_toStartOf="@+id/viewProfileImageHolder"
+                        app:layout_constraintTop_toBottomOf="@+id/viewProfileImageHolder" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/viewEmailData"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="J_Andersson1@gmail.com"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView"
-                        app:layout_constraintStart_toStartOf="@+id/textView"
-                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+                        app:layout_constraintEnd_toEndOf="@+id/viewFullNameData"
+                        app:layout_constraintStart_toStartOf="@+id/viewFullNameData"
+                        app:layout_constraintTop_toBottomOf="@+id/viewFullNameData" />
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/viewCirclesBackgroundImage"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:scaleType="centerCrop"
@@ -96,7 +96,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView2">
+                        app:layout_constraintTop_toBottomOf="@+id/viewEmailData">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -120,7 +120,7 @@
                                     android:background="@drawable/circle_background">
 
                                     <ImageView
-                                        android:id="@+id/imageView3"
+                                        android:id="@+id/viewPaymentImage"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -131,7 +131,7 @@
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <TextView
-                                    android:id="@+id/textView3"
+                                    android:id="@+id/viewPaymentLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="8dp"
@@ -160,7 +160,7 @@
                                     android:background="@drawable/circle_background">
 
                                     <ImageView
-                                        android:id="@+id/imageView3"
+                                        android:id="@+id/viewSettingsImage"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -171,7 +171,7 @@
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <TextView
-                                    android:id="@+id/textView3"
+                                    android:id="@+id/viewSettingsLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="8dp"
@@ -200,7 +200,7 @@
                                     android:background="@drawable/circle_background">
 
                                     <ImageView
-                                        android:id="@+id/imageView3"
+                                        android:id="@+id/viewNotfiationImage"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -211,7 +211,7 @@
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <TextView
-                                    android:id="@+id/textView3"
+                                    android:id="@+id/viewNotificationLbl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="8dp"
@@ -234,20 +234,20 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/viewFirstNameLbl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Password"
+                                android:text="First Name"
                                 android:textColor="#182693"
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView5"
+                                android:id="@+id/viewFirstNameData"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Change"
+                                android:text="James"
                                 android:textAlignment="viewEnd"
                                 android:textColor="#5B5B5B"
                                 android:textSize="16sp" />
@@ -270,20 +270,20 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/viewLastNameLbl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Mobile"
+                                android:text="Last Name"
                                 android:textColor="#182693"
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView5"
+                                android:id="@+id/viewLastNameData"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Mob 1234 1234 1234"
+                                android:text="Andersson"
                                 android:textAlignment="viewEnd"
                                 android:textColor="#5B5B5B"
                                 android:textSize="16sp" />
@@ -306,20 +306,20 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/viewPhoneLbl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Tell"
+                                android:text="Phone"
                                 android:textColor="#182693"
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView5"
+                                android:id="@+id/viewPhoneData"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Tell 123 123"
+                                android:text="647 123 123"
                                 android:textAlignment="viewEnd"
                                 android:textColor="#5B5B5B"
                                 android:textSize="16sp" />
@@ -342,7 +342,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/viewAddressLbl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -351,7 +351,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView5"
+                                android:id="@+id/viewAddressData"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -378,7 +378,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/viewPostalCodeLbl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -387,7 +387,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView5"
+                                android:id="@+id/viewPostalCodeData"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -403,7 +403,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/editBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
