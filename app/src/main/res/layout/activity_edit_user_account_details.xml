@@ -13,12 +13,10 @@
         android:layout_height="wrap_content"
         android:text="Edit Profile Details"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@id/customerDetailsTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/customerDetailsTitle"
@@ -27,166 +25,155 @@
         android:layout_height="wrap_content"
         android:text="Personal Details"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typeYourName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkoutTitle"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/checkoutTitle" />
 
     <TextView
-        android:id="@+id/cardDetailsTitle"
+        android:id="@+id/SavedCardDetailsTitle"
         style="@style/SubHeadings"
         android:layout_width="157dp"
         android:layout_height="wrap_content"
-        android:text="Card Details"
+        android:layout_marginTop="332dp"
+        android:text="Saved Card"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typeCardNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/typePhoneNumber"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <EditText
         android:id="@+id/typeYourName"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:hint="First Name"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typeYourLastName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customerDetailsTitle"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailsTitle" />
 
-    <EditText
+    <TextView
         android:id="@+id/typeCardNumber"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
         android:hint="Credit Card Number"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typeCardType"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardDetailsTitle"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/typeCvvCvc"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:hint="Type CVV/CVC"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/SaveBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeExpirationDate"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/typeCardType"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:hint="Card Type"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typeExpirationDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCardNumber"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/typeExpirationDate"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:hint="CC Expiration Date (mm/yy)"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typeCvvCvc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCardType"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/SavedCardDetailsTitle"
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
         android:id="@+id/SaveBtn"
+        style="@style/Base.CardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Save"
-        android:text="Save"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_background"
+        android:hint="Save"
+        android:text="Save"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
-        style="@style/Base.CardView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCvvCvc"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/goToAddPaymentBtn"
+        app:layout_constraintVertical_bias="0.974" />
+
+    <Button
+        android:id="@+id/cancelProfileSaveBtn"
+        style="@style/Base.CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background"
+        android:hint="Cancel"
+        android:text="Cancel"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goToAddPaymentBtn"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <Button
+        android:id="@+id/goToAddPaymentBtn"
+        style="@style/Base.CardView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background"
+        android:hint="Add Payment"
+        android:text="Add Payment"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeCardNumber"
+        app:layout_constraintVertical_bias="0.052" />
 
     <EditText
         android:id="@+id/typePhoneNumber"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:hint="Phone Number"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/cardDetailsTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typePostalCode"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/typePostalCode" />
 
     <EditText
         android:id="@+id/typePostalCode"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:hint="Postal Code"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typePhoneNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeYourAddress"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/typeYourAddress" />
 
     <EditText
         android:id="@+id/typeYourAddress"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:hint="Street Address"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typePostalCode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeYourLastName"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/typeYourLastName" />
 
     <EditText
         android:id="@+id/typeYourLastName"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:hint="Last Name"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/typeYourAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeYourName"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/typeYourName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

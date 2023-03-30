@@ -30,6 +30,32 @@ class EditUserAccountDetailsActivity : AppCompatActivity() {
             Toast.makeText(this@EditUserAccountDetailsActivity, "Save Successful", Toast.LENGTH_SHORT).show()
 
         }
+
+        val cancelSaveBtn=findViewById<Button>(R.id.cancelProfileSaveBtn)
+
+        //Click Cancel Button action - cancel and go to user account page
+        cancelSaveBtn.setOnClickListener {
+
+            Intent(this, ViewUserAccountActivity::class.java).also {
+
+                startActivity(it)
+            }
+
+            Toast.makeText(this@EditUserAccountDetailsActivity, "Save Cancelled", Toast.LENGTH_SHORT).show()
+
+        }
+
+        val addPaymentBtn=findViewById<Button>(R.id.goToAddPaymentBtn)
+
+        //Click Add Payment Button action - Go to Add payment view
+        addPaymentBtn.setOnClickListener {
+
+            Intent(this, SavePaymentActivity::class.java).also {
+
+                startActivity(it)
+            }
+
+        }
     }
 
     private fun saveData() {
