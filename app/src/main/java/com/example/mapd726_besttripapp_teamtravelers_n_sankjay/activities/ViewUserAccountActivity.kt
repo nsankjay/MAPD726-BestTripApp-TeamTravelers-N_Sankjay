@@ -2,15 +2,28 @@ package com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.R
 
 class ViewUserAccountActivity : AppCompatActivity() {
+    var pickedPhoto : Uri? = null
+    var pickedBitMap : Bitmap? = null
+
+    private lateinit var photoUploadButton: Button
+    private lateinit var profileImageView: ImageView
+
+    companion object {
+        val IMAGE_REQUEST_CODE = 100
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_user_account)
@@ -59,6 +72,27 @@ class ViewUserAccountActivity : AppCompatActivity() {
                 startActivity(it)
             }
 
+        }
+
+        photoUploadButton = findViewById(R.id.uploadPhotoBtn)
+        profileImageView = findViewById(R.id.viewProfileImageHolder)
+
+        //Uplaod photo button action
+        photoUploadButton.setOnClickListener {
+            pickImageGallery()
+        }
+    }
+
+    private fun pickImageGallery() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, IMAGE_REQUEST_CODE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK) {
+            profileImageView.setImageURI(data?.data)
         }
     }
 
