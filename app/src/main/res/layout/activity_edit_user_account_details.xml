@@ -34,14 +34,13 @@
         style="@style/SubHeadings"
         android:layout_width="157dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="332dp"
         android:text="Saved Card"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typePhoneNumber"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.725" />
 
     <EditText
         android:id="@+id/typeYourName"
@@ -59,16 +58,15 @@
         android:id="@+id/typeCardNumber"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
         android:hint="Credit Card Number"
         android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SavedCardDetailsTitle"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
 
     <Button
         android:id="@+id/SaveBtn"
@@ -113,7 +111,6 @@
         style="@style/Base.CardView"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/button_background"
         android:hint="Add Payment"
         android:text="Add Payment"
@@ -124,8 +121,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCardNumber"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834" />
 
     <EditText
         android:id="@+id/typePhoneNumber"
@@ -139,6 +136,18 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/typePostalCode" />
+
+    <EditText
+        android:id="@+id/typeEmail"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="E-Mail"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typePhoneNumber" />
 
     <EditText
         android:id="@+id/typePostalCode"

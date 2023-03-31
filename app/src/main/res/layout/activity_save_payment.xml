@@ -64,23 +64,21 @@
         android:id="@+id/typeCvvCvc"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="296dp"
         android:hint="Type CVV/CVC"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/SaveBtn"
+        app:layout_constraintBottom_toTopOf="@+id/cardSaveBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeExpirationDate"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/SaveBtn"
+        android:id="@+id/cardSaveBtn"
         style="@style/Base.CardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="448dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="18dp"
         android:background="@drawable/button_background"
@@ -92,8 +90,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeCvvCvc" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/cancelCardSaveBtn"
@@ -109,9 +106,11 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardSaveBtn"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/typeCvvCvc"
-        app:layout_constraintVertical_bias="0.997" />
+        app:layout_constraintVertical_bias="0.996" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
