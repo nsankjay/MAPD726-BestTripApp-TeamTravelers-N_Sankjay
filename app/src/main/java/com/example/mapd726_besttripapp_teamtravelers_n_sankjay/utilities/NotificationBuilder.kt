@@ -1,4 +1,4 @@
-package com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities
+package com.example.mapd726_besttripapp_teamtravelers_n_sankjay.utilities
 
 import android.app.Notification
 import android.app.NotificationChannel

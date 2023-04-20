@@ -1,13 +1,15 @@
-package com.example.mapd726_besttripapp_teamtravelers_n_sankjay
+package com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities.BestTripBotActivity
-import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities.SavePaymentActivity
-import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities.ViewUserAccountActivity
+import android.widget.ListView
+import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.R
+import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.adapter.BestTripBotModelAdapter
+import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.dataModel.BestTripBotModel
+import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.services.BestTripBotService
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +42,11 @@ class MainActivity : AppCompatActivity() {
             R.id.menuHelpBtn -> {
                 i = Intent(this, BestTripBotActivity::class.java)
                 startActivity(i)
+
+                Intent(this, BestTripBotService::class.java).also {
+                    startService(it)
+                }
+
             }
 
 

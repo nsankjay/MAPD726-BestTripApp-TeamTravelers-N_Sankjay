@@ -1,4 +1,4 @@
-package com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities
+package com.example.mapd726_besttripapp_teamtravelers_n_sankjay.services
 
 import android.app.NotificationManager
 import android.app.Service
@@ -6,10 +6,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
+import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.utilities.NotificationBuilder
 
 class BestTripBotService : Service() {
 
-    private val messages = arrayOf("Hello %s!", "How are you?", "Good Bye %s!")
+    private val messages = arrayOf("Hello %s!", "I'm Great! How Can I Help You?", "Certainl!.. Your issue is fixed", "Good Bye %s!")
     private var counter = 0
     private lateinit var notificationHandler: NotificationBuilder
 
@@ -27,9 +28,10 @@ class BestTripBotService : Service() {
 
     override fun onBind(p0: Intent?): IBinder? = null
 
-    private fun sendBroadcast(message: String){
+    private fun sendBroadcast(message: String, recievedMessage: String){
         val responseBundle = Bundle()
         responseBundle.putString(KEY_RESPONSE_MSG, message)
+        responseBundle.putString(KEY_SENT_MSG, recievedMessage)
         val responseIntent = Intent().apply {
             putExtras(responseBundle)
             action = KEY_RESPONSE_CMD
@@ -45,11 +47,13 @@ class BestTripBotService : Service() {
             when (val cmd = data?.getInt(KEY_CMD)) {
                 CMD_GENERATE_MESSAGE -> {
                     val name = data.getString(KEY_NAME)
-                    Log.d(TAG, "onStartCommand: $cmd, $name")
+                    val chatMsg = data.getString(KEY_SENT_MSG)
+                    Log.d(TAG, "onStartCommand: $cmd, $name, $chatMsg")
                     val message = messages[counter].format(name)
-                    counter = (counter + 1) % 3
+                    val recievedMessage = chatMsg.toString()
+                    counter = (counter + 1) % 4
 
-                    sendBroadcast(message)
+                    sendBroadcast(message, recievedMessage)
                     notificationHandler.sendMessage(message)
                 }
                 else -> {
@@ -73,6 +77,7 @@ class BestTripBotService : Service() {
         const val CMD_GENERATE_MESSAGE = 50
         const val KEY_CMD = "cmd"
         const val KEY_NAME = "name"
+        const val KEY_SENT_MSG = "msg"
         const val KEY_RESPONSE_MSG = "chat_message"
         const val KEY_RESPONSE_CMD = "chat_cmd"
         private const val TAG = "ChatBotService"

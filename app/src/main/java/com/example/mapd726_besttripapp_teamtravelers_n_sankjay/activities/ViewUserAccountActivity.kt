@@ -1,6 +1,5 @@
 package com.example.mapd726_besttripapp_teamtravelers_n_sankjay.activities
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
@@ -9,11 +8,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.MainActivity
 import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.R
 
 class ViewUserAccountActivity : AppCompatActivity() {
