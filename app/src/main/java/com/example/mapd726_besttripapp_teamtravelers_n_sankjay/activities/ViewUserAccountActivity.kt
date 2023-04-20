@@ -121,6 +121,11 @@ class ViewUserAccountActivity : AppCompatActivity() {
                 startActivity(i)
             }
 
+            R.id.menuHelpBtn -> {
+                i = Intent(this, BestTripBotActivity::class.java)
+                startActivity(i)
+            }
+
 
         }
 
