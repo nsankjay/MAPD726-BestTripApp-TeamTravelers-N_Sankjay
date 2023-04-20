@@ -121,6 +121,7 @@ class BestTripBotActivity : AppCompatActivity() {
             if (action == BestTripBotService.KEY_RESPONSE_CMD) {
                 if (data != null) {
                     textView.append("${data.getString(KEY_SENT_MSG)}\n")
+                    textView.append(" \n")
                     val delayInMillis = 1500L // 1.5 seconds
                     Handler(Looper.getMainLooper()).postDelayed({
                         textView.append("   ${data.getString(KEY_RESPONSE_MSG)}\n")
@@ -165,6 +166,16 @@ class BestTripBotActivity : AppCompatActivity() {
 
             R.id.menuHomeBtn -> {
                 i = Intent(this, MainActivity::class.java)
+                startActivity(i)
+
+                Intent(this, BestTripBotService::class.java).also {
+                    stopService(it)
+                }
+
+            }
+
+            R.id.menuNotificationBtn -> {
+                i = Intent(this, NotificationListActivity::class.java)
                 startActivity(i)
 
                 Intent(this, BestTripBotService::class.java).also {

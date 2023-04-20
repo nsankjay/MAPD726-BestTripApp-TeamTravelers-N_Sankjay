@@ -7,8 +7,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.R
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SavePaymentActivity : AppCompatActivity() {
+
+    var paymentSaveDate: String = ""
+    var paymentChangeText: String = "Payment has been updated"
+
     //lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +25,9 @@ class SavePaymentActivity : AppCompatActivity() {
 
         val paymentSharedPref = getSharedPreferences("paymentSharedPref", MODE_PRIVATE)
         val editor = paymentSharedPref.edit()
+
+        val notificationsSharedPref = getSharedPreferences("notificationsSharedPref", MODE_PRIVATE)
+        val notificationsSharedPrefeditor = notificationsSharedPref.edit()
 
 
         val cancelCardSaveBtn=findViewById<Button>(R.id.cancelCardSaveBtn)
@@ -53,11 +63,15 @@ class SavePaymentActivity : AppCompatActivity() {
 
         //Click Save Card Button action - Save Card and go to View user account page
         saveCardBtn.setOnClickListener {
+            setSaveCurrentDate ()
 
             val cardNumber = ccCardNumber.text.toString()
             val cardType = ccCardType.text.toString()
             val cardExpiry = ccExpiryDate.text.toString()
             val cardCvv = ccCvv.text.toString()
+            val currentDate = paymentSaveDate
+            val notiTitleText = paymentChangeText
+
 
             editor.apply{
                 putString("pref_card_number", cardNumber)
@@ -66,6 +80,12 @@ class SavePaymentActivity : AppCompatActivity() {
                 putString("pref_card_cvv", cardCvv)
                 apply()
 
+            }
+
+            notificationsSharedPrefeditor.apply {
+                putString("pref_noti_title", notiTitleText)
+                putString("pref_noti_date", currentDate)
+                apply()
             }
 
 
@@ -78,5 +98,12 @@ class SavePaymentActivity : AppCompatActivity() {
             Toast.makeText(this@SavePaymentActivity, "Card Save Successful", Toast.LENGTH_SHORT).show()
 
         }
+    }
+
+    private fun setSaveCurrentDate ()
+    {
+        val simpleDateFormat: DateFormat = SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+        val calendar = Calendar.getInstance()
+        paymentSaveDate = simpleDateFormat.format(calendar.time)
     }
 }
