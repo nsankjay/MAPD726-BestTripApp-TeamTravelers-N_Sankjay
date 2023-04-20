@@ -10,7 +10,7 @@ import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.utilities.Notific
 
 class BestTripBotService : Service() {
 
-    private val messages = arrayOf("Hello %s!", "I'm Great! How Can I Help You?", "Certainl!.. Your issue is fixed", "Good Bye %s!")
+    private val messages = arrayOf("Hello %s!", "I'm Great! How Can I Help You?", "Certainly!.. Your issue is fixed!", "Good Bye %s!")
     private var counter = 0
     private lateinit var notificationHandler: NotificationBuilder
 

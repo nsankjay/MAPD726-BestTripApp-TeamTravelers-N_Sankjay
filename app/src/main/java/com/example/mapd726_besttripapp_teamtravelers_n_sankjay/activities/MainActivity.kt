@@ -49,6 +49,11 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+            R.id.menuNotificationBtn -> {
+                i = Intent(this, NotificationListActivity::class.java)
+                startActivity(i)
+            }
+
 
         }
 

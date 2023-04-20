@@ -12,6 +12,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.R
+import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.services.BestTripBotService
 
 class ViewUserAccountActivity : AppCompatActivity() {
     var pickedPhoto : Uri? = null
@@ -39,6 +40,8 @@ class ViewUserAccountActivity : AppCompatActivity() {
         val dspFullName = findViewById<TextView>(R.id.viewFullNameData)
         val dspEMail = findViewById<TextView>(R.id.viewEmailData)
         val clickableWalletImage = findViewById<ImageButton>(R.id.clickablePaymentImage)
+        val clickableHelpImage = findViewById<ImageButton>(R.id.clickableHelpImage)
+        val clickableNotificationImage = findViewById<ImageButton>(R.id.clickableNotificationImage)
 
         val firstNameRslt = profileSharedPref.getString("pref_first_name",null)
         val lastNameRslt = profileSharedPref.getString("pref_last_name",null)
@@ -68,6 +71,28 @@ class ViewUserAccountActivity : AppCompatActivity() {
         //Click Wallet Image Button action - go to Save Payment details page
         clickableWalletImage.setOnClickListener {
             Intent(this, SavePaymentActivity::class.java).also {
+
+                startActivity(it)
+            }
+
+        }
+
+        //Click Help Image Button action - go to chat bot page
+        clickableHelpImage.setOnClickListener {
+            Intent(this, BestTripBotActivity::class.java).also {
+
+                startActivity(it)
+
+                Intent(this, BestTripBotService::class.java).also {
+                    startService(it)
+                }
+            }
+
+        }
+
+        //Click Notification Image Button action - go to Notification page
+        clickableNotificationImage.setOnClickListener {
+            Intent(this, NotificationListActivity::class.java).also {
 
                 startActivity(it)
             }
@@ -120,6 +145,16 @@ class ViewUserAccountActivity : AppCompatActivity() {
 
             R.id.menuHelpBtn -> {
                 i = Intent(this, BestTripBotActivity::class.java)
+                startActivity(i)
+
+                Intent(this, BestTripBotService::class.java).also {
+                    startService(it)
+                }
+
+            }
+
+            R.id.menuNotificationBtn -> {
+                i = Intent(this, NotificationListActivity::class.java)
                 startActivity(i)
             }
 

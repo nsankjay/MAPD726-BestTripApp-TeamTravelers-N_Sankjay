@@ -163,10 +163,12 @@
                                     android:layout_margin="12dp"
                                     android:background="@drawable/circle_background">
 
-                                    <ImageView
-                                        android:id="@+id/viewSettingsImage"
+                                    <ImageButton
+                                        android:id="@+id/clickableHelpImage"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:scaleX="0.8"
+                                        android:scaleY="0.8"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
@@ -203,15 +205,27 @@
                                     android:layout_margin="12dp"
                                     android:background="@drawable/circle_background">
 
-                                    <ImageView
-                                        android:id="@+id/viewNotfiationImage"
+                                    <ImageButton
+                                        android:id="@+id/clickableNotificationImage"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:scaleX="0.8"
+                                        android:scaleY="0.8"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:srcCompat="@drawable/notification" />
+
+<!--                                    <ImageView-->
+<!--                                        android:id="@+id/viewNotfiationImage"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                                        app:srcCompat="@drawable/notification" />-->
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <TextView
