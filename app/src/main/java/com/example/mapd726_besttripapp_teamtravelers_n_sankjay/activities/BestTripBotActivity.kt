@@ -146,16 +146,31 @@ class BestTripBotActivity : AppCompatActivity() {
             R.id.menuViewProfileBtn -> {
                 i = Intent(this, ViewUserAccountActivity::class.java)
                 startActivity(i)
+
+                Intent(this, BestTripBotService::class.java).also {
+                    stopService(it)
+                }
+
             }
 
             R.id.menuPaymentBtn -> {
                 i = Intent(this, SavePaymentActivity::class.java)
                 startActivity(i)
+
+                Intent(this, BestTripBotService::class.java).also {
+                    stopService(it)
+                }
+
             }
 
             R.id.menuHomeBtn -> {
                 i = Intent(this, MainActivity::class.java)
                 startActivity(i)
+
+                Intent(this, BestTripBotService::class.java).also {
+                    stopService(it)
+                }
+
             }
 
 
