@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         var i = intent
         when (item.itemId) {
-            R.id.menuHomeBtn -> {
+            R.id.menuViewProfileBtn -> {
                 i = Intent(this, ViewUserAccountActivity::class.java)
                 startActivity(i)
             }

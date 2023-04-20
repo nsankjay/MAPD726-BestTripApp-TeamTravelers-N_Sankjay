@@ -171,7 +171,7 @@
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/settings" />
+                                        app:srcCompat="@drawable/ic_chatbot_64" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <TextView
@@ -179,7 +179,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="8dp"
-                                    android:text="Settings"
+                                    android:text="Help"
                                     android:textAlignment="center"
                                     android:textColor="#000000"
                                     android:textSize="13sp"

@@ -6,11 +6,14 @@ import android.graphics.Bitmap
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.MainActivity
 import com.example.mapd726_besttripapp_teamtravelers_n_sankjay.R
 
 class ViewUserAccountActivity : AppCompatActivity() {
@@ -94,6 +97,34 @@ class ViewUserAccountActivity : AppCompatActivity() {
         if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK) {
             profileImageView.setImageURI(data?.data)
         }
+    }
+
+    //    Loading the menu in the view
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_profile, menu)
+        return true
+    }
+
+    // Menu options onClick event
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        var i = intent
+        when (item.itemId) {
+            R.id.menuHomeBtn -> {
+                i = Intent(this, MainActivity::class.java)
+                startActivity(i)
+            }
+
+            R.id.menuPaymentBtn -> {
+                i = Intent(this, SavePaymentActivity::class.java)
+                startActivity(i)
+            }
+
+
+        }
+
+        return true
     }
 
 }

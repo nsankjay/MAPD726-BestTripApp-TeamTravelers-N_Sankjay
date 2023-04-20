@@ -4,32 +4,32 @@
 
     <item
         android:id="@+id/menuHomeBtn"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menuViewProfileBtn"
+        android:icon="@drawable/ic_baseline_account_circle_24"
         android:title="Go to Home"
         app:showAsAction="ifRoom" />
 
 
     <item
         android:id="@+id/menuPaymentBtn"
-        android:title="Wallet"
+        android:title="Add Payment"
         app:showAsAction="never"
         />
 
     <item
-        android:id="@+id/menuNotification"
-        android:title="Samsung"
+        android:id="@+id/menuNotificationBtn"
+        android:title="Notifications"
         app:showAsAction="never"
         />
 
     <item
-        android:id="@+id/miGooglePixel"
-        android:title="Google Pixel"
-        app:showAsAction="never"
-        />
-
-    <item
-        android:id="@+id/miOppo"
-        android:title="Oppo"
+        android:id="@+id/menuHelpBtn"
+        android:title="Chat with Support"
         app:showAsAction="never"
         />
 
